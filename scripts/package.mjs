@@ -1,6 +1,6 @@
 // Build the versioned release tarball from build/ (the rendered site), plus a
 // .sha256. The tarball's top-level entries are the served paths themselves
-// (zf_info/, images/, ZFIN/, robots.txt, favicon.ico, analytics.js), so it
+// (zf_info/, images/, ZFIN/), so it
 // extracts straight onto the /opt/zfin/static volume.
 //
 // Usage: node scripts/package.mjs [version]

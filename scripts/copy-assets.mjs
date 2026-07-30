@@ -1,5 +1,6 @@
-// Copy everything Eleventy does NOT render into build/: all images, the ZFIN
-// legacy pages, and the root files (robots.txt, favicon.ico, analytics.js).
+// Copy everything Eleventy does NOT render into build/: all images and the ZFIN
+// legacy pages. (The site's root files -- robots.txt, favicon.ico, analytics.js
+// -- are not in this repo; they deploy from the main repo's docroot/.)
 // Excludes the zf_info fragment pages (Eleventy renders those) and the Eleventy
 // machinery (_includes, *.11tydata.*). Using a filter instead of extension
 // globs handles the extensionless/oddly-named image files under zf_info cleanly.

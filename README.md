@@ -29,9 +29,6 @@ src/
     toc/*.json                RWPM-subset navigation manifests (served at /zf_info/toc/)
   images/                     shared site images
   ZFIN/                       legacy pages (different shell — copied verbatim, not templated)
-  robots.txt
-  favicon.ico
-  analytics.js                self-contained, host-switched GA4 loader
 eleventy.config.js            renders only zf_info/*.html; ignores ZFIN/
 scripts/copy-assets.mjs       copies all non-templated files into build/
 scripts/package.mjs           tars build/ + writes .sha256
@@ -131,9 +128,14 @@ require the main `zfin.org` app to keep serving:
 - `/action/layout/header` and `/action/layout/footer` — Tomcat/`ChromeController`
   fragments injected client-side by `zfin-chrome.js`. The header is login-aware,
   which is why it is fetched at runtime rather than baked in.
+- `/analytics.js` — the host-switched GA4 loader, referenced by the shell. It
+  lives in the main repo (`docroot/analytics.js`) because the dynamic `/action`
+  pages load the same file; this repo only links to it.
 
-`analytics.js` is the exception: it is fully self-contained (picks the GA4 id
-from `window.location.hostname`) and carries no build-time substitution.
+The site's own root files (`robots.txt`, `favicon.ico`, `analytics.js`) are
+deliberately **not** in this repo. They belong to the application, not the
+archival content, and are deployed from the main repo's `docroot/` — so changing
+a `Disallow:` rule is an ordinary app deploy rather than a release here.
 
 Keep those alias names and endpoints stable, or coordinate the change across
 both repos.
@@ -155,8 +157,8 @@ package` and attaches two assets to the release:
 - `zfin-static-<version>.tar.gz.sha256` — its checksum
 
 The tarball's top-level entries are the served paths themselves (`zf_info/`,
-`images/`, `ZFIN/`, `robots.txt`, `favicon.ico`, `analytics.js`), with no `src/`
-wrapper, so it extracts straight onto the static volume:
+`images/`, `ZFIN/`), with no `src/` wrapper, so it extracts straight onto the
+static volume:
 
 ```sh
 tar -xzf zfin-static-v1.0.0.tar.gz -C /opt/zfin/static
