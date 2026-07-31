@@ -333,14 +333,6 @@
     {
       "href": "/zf_info/zfbook/chapt10.html",
       "title": "ABC Solution (Avidin-Biotin HRP Complex)"
-    },
-    {
-      "href": "/zf_info/zfbook/zfbk.html",
-      "title": "The Zebrafish Book: Contents"
-    },
-    {
-      "href": "/zf_info/zfbook/lab_desig.html",
-      "title": "Line Designations"
     }
   ],
   "toc": [
@@ -733,7 +725,7 @@
     }
   ],
   "coverage": {
-    "readingOrderPages": 83,
+    "readingOrderPages": 81,
     "collectionHtmlPages": 152
   }
 }
