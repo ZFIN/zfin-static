@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "Everything else",
+    "identifier": "everything-else",
+    "description": "Catch-all: every static .html page in the repository that no other collection TOC lists. Includes the collection contents/landing pages (which are targets of the other TOCs rather than entries in them), the anatomical dictionary, and the legacy /ZFIN site help and misc pages. This collection has no reading sequence -- `readingOrder` is intentionally empty so booknav.js never threads prev/next through it, and fulltoc.html falls back to counting `toc` entries for the badge. The only .html file deliberately left out is /zf_info/toc/fulltoc.html itself."
+  },
+  "readingOrder": [],
+  "toc": [
+    {
+      "title": "Collection contents &amp; landing pages",
+      "children": [
+        { "href": "/zf_info/zfbook/cont.html", "title": "The Zebrafish Book &mdash; contents" },
+        { "href": "/zf_info/zfbook/stages/index.html", "title": "Developmental Staging Series &mdash; contents" },
+        { "href": "/zf_info/anatomy.html", "title": "Atlas of Zebrafish Anatomy &mdash; contents" },
+        { "href": "/zf_info/monitor/mon.html", "title": "The Zebrafish Science Monitor &mdash; contents" },
+        { "href": "/zf_info/monitor/vol3.3/cont.html", "title": "Zebrafish Science Monitor Vol 3(3) &mdash; contents" },
+        { "href": "/zf_info/monitor/vol3.4/cont.html", "title": "Zebrafish Science Monitor Vol 3(4) &mdash; contents" },
+        { "href": "/zf_info/monitor/vol3.5/cont.html", "title": "Zebrafish Science Monitor Vol 3(5) &mdash; contents" },
+        { "href": "/zf_info/monitor/vol3.6/cont.html", "title": "Zebrafish Science Monitor Vol 3(6) &mdash; contents" },
+        { "href": "/zf_info/monitor/vol4.1/cont.html", "title": "Zebrafish Science Monitor Vol 4(1) &mdash; contents" }
+      ]
+    },
+    {
+      "title": "Anatomy Atlas &mdash; stage overviews",
+      "children": [
+        { "href": "/zf_info/anatomy/24hrs/24hrs.html", "title": "The 24 hr Embryo" },
+        { "href": "/zf_info/anatomy/48hrs/48hrs.html", "title": "The 48 hr Embryo" },
+        { "href": "/zf_info/anatomy/72hrs/72hrs.html", "title": "The 72 hr Embryo" },
+        { "href": "/zf_info/anatomy/120hrs/120hrs.html", "title": "The 120 hr Embryo" }
+      ]
+    },
+    {
+      "title": "Zebrafish Anatomical Dictionary",
+      "children": [
+        { "href": "/zf_info/anatomy/dict/Trevarrow.html", "title": "Anatomical parts list (Trevarrow)" },
+        { "href": "/zf_info/anatomy/dict/mem.html", "title": "Workgroup members" },
+        { "href": "/zf_info/anatomy/dict/meeting_sum.html", "title": "May 11, 1999 organizational meeting" },
+        { "href": "/zf_info/anatomy/dict/caud_fin/ha.html", "title": "Hemal arches (preural)" },
+        { "href": "/zf_info/anatomy/dict/caud_fin/hs.html", "title": "Hemal spines (preural)" },
+        { "href": "/zf_info/anatomy/dict/caud_fin/hyp.html", "title": "Hypurals" },
+        { "href": "/zf_info/anatomy/dict/caud_fin/phy.html", "title": "Parhypural" },
+        { "href": "/zf_info/anatomy/dict/caud_fin/pu.html", "title": "Preural centra and urostyle" },
+        { "href": "/zf_info/anatomy/dict/ear/ear.html", "title": "Ear" },
+        { "href": "/zf_info/anatomy/dict/hair_cell/hair_cell.html", "title": "Hair cells" },
+        { "href": "/zf_info/anatomy/dict/lat_line/lat_line.html", "title": "Lateral line" },
+        { "href": "/zf_info/anatomy/dict/oto/otolith.html", "title": "Otolith" },
+        { "href": "/zf_info/anatomy/dict/semi_canal/semi.html", "title": "Semicircular canals of the ear" },
+        { "href": "/zf_info/anatomy/dict/sens/sens.html", "title": "Sensory patches of the ear" },
+        { "href": "/zf_info/anatomy/dict/stato/stato.html", "title": "Statoacoustic ganglion" }
+      ]
+    },
+    {
+      "title": "ZFIN site &mdash; help pages",
+      "children": [
+        { "href": "/ZFIN/help_files/GO.html", "title": "Gene Ontology (GO)" },
+        { "href": "/ZFIN/help_files/expression_help.html", "title": "Gene expression data" },
+        { "href": "/ZFIN/help_files/antibody_assay_help.html", "title": "Assays in ZFIN" },
+        { "href": "/ZFIN/help_files/sequence_tools_help.html", "title": "Analysis tools for sequences in ZFIN" },
+        { "href": "/ZFIN/help_files/fishselecthelp.html", "title": "Searching for mutant and wild-type lines" },
+        { "href": "/ZFIN/help_files/help-fish.html", "title": "Submitting a new strain" },
+        { "href": "/ZFIN/help_files/mut_intro.html", "title": "Mutant search: phenotypic keyword applet" },
+        { "href": "/ZFIN/help_files/label.html", "title": "ZFIN Help (frame label)" },
+        { "href": "/ZFIN/help_files/generichelp.html", "title": "Generic help placeholder" }
+      ]
+    },
+    {
+      "title": "ZFIN site &mdash; search tips and interface pages",
+      "children": [
+        { "href": "/ZFIN/misc_html/fish_search_tips.html", "title": "Fish search tips" },
+        { "href": "/ZFIN/misc_html/fish_search_filters.html", "title": "Fish search filters" },
+        { "href": "/ZFIN/misc_html/antibody_search_tips.html", "title": "Antibody search tips" },
+        { "href": "/ZFIN/misc_html/constructs_search_tips.html", "title": "Construct search tips" },
+        { "href": "/ZFIN/misc_html/refer_info.html", "title": "Exporting from ZFIN in REFER format" },
+        { "href": "/ZFIN/misc_html/intro1.html", "title": "Brief instructions (search interface)" },
+        { "href": "/ZFIN/misc_html/intro_mapper.html", "title": "Brief instructions (mapper)" },
+        { "href": "/ZFIN/misc_html/saysearching.html", "title": "\"Searching&hellip;\" progress page" },
+        { "href": "/ZFIN/misc_html/saycomposing.html", "title": "\"Working&hellip;\" progress page" },
+        { "href": "/ZFIN/misc_html/wrong_browser.html", "title": "WARNING: Unsupported browser software" },
+        { "href": "/ZFIN/misc_html/blank.html", "title": "Blank page (frame filler)" },
+        { "href": "/ZFIN/index.html", "title": "ZFIN (redirect to the site home page)" }
+      ]
+    },
+    {
+      "title": "ZFIN site &mdash; methods and workgroups",
+      "children": [
+        { "href": "/ZFIN/Methods/ThisseProtocol.html", "title": "In situ hybridization on whole mount zebrafish embryos (Thisse &amp; Thisse)" },
+        { "href": "/ZFIN/Workgroup_dirs/AnatDict/meeting_sum.html", "title": "Anatomical Dictionary workgroup: May 11, 1999 NIH meeting summary" }
+      ]
+    }
+  ],
+  "coverage": {
+    "readingOrderPages": 0,
+    "tocPages": 51
+  }
+}

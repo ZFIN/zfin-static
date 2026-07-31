@@ -1,11 +1,12 @@
 {
-  "note": "Index of the per-collection navigation files, each an RWPM subset (Readium Web Publication Manifest: metadata + links + readingOrder + toc). This index itself is not RWPM (RWPM has no list-of-publications concept). Consumed by fulltoc.html (which collections to render, in order) and booknav.js (map a page path -> its collection via `prefixes`; longest match wins; `fallback` catches unmatched /zf_info pages). Hand-maintained.",
+  "note": "Index of the per-collection navigation files, each an RWPM subset (Readium Web Publication Manifest: metadata + links + readingOrder + toc). This index itself is not RWPM (RWPM has no list-of-publications concept). Consumed by fulltoc.html (which collections to render, in order) and booknav.js (map a page path -> its collection via `prefixes`; longest match wins; `fallback` catches unmatched /zf_info pages). Hand-maintained. The final `everything-else` collection is a catch-all listing every .html file in the repo that no other collection lists (including /ZFIN pages); it has no prefixes and is not the fallback, so booknav.js never selects it, and its empty readingOrder means fulltoc.html counts its toc entries instead.",
   "collections": [
     { "name": "zfbook",  "label": "The Zebrafish Book",            "json": "zfbook.json",  "prefixes": ["/zf_info/zfbook/"] },
     { "name": "staging", "label": "Developmental Staging Series",  "json": "staging.json", "prefixes": ["/zf_info/zfbook/stages/"] },
     { "name": "monitor", "label": "The ZFIN Monitor",              "json": "monitor.json", "prefixes": ["/zf_info/monitor/"] },
     { "name": "anatomy", "label": "Developmental Anatomy Atlas",   "json": "anatomy.json", "prefixes": ["/zf_info/anatomy"] },
     { "name": "loose",   "label": "Other collections",             "json": "loose.json",   "prefixes": ["/zf_info/catch/", "/zf_info/news/", "/zf_info/sequence/", "/zf_info/dbase/"] },
-    { "name": "misc",    "label": "Miscellaneous pages",           "json": "misc.json",    "prefixes": [], "fallback": true }
+    { "name": "misc",    "label": "Miscellaneous pages",           "json": "misc.json",    "prefixes": [], "fallback": true },
+    { "name": "everything-else", "label": "Everything else",       "json": "everything-else.json", "prefixes": [] }
   ]
 }

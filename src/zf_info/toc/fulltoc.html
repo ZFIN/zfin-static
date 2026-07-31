@@ -1,5 +1,5 @@
 ---
-title: "ZFIN zf_info — Full Table of Contents"
+title: "ZFIN Static Pages"
 ---
 <style>
     .fulltoc { max-width: 60rem; }
@@ -24,11 +24,12 @@ title: "ZFIN zf_info — Full Table of Contents"
 </style>
 
 <div class="fulltoc">
-    <h1>The Zebrafish Information Network &mdash; zf_info contents</h1>
+    <h1>ZFIN Static Pages</h1>
     <p class="intro">
-        A generated index of the archival <code>zf_info</code> reference pages,
-        built at page load from the per-collection TOC JSON under
-        <code>/zf_info/toc/</code>.
+        A complete list of the static pages on this site &mdash; the Zebrafish Book,
+        the Monitor, the anatomy atlas, protocols, help pages and more. These are
+        informational pages, written and maintained as web pages, rather than
+        generated from the ZFIN database.
     </p>
     <div class="toolbar">
         <button type="button" id="toc-expand">Expand all</button>
@@ -90,7 +91,10 @@ title: "ZFIN zf_info — Full Table of Contents"
     function renderCollection(label, data) {
         var details = document.createElement('details');
         var summary = document.createElement('summary');
-        var count = (data.readingOrder && data.readingOrder.length) || 0;
+        // Sequenced collections are counted by their reading order; a catch-all
+        // with no sequence (empty readingOrder) is counted by its toc entries.
+        var count = (data.readingOrder && data.readingOrder.length) ||
+            (data.toc || []).reduce(function (n, s) { return n + ((s.children || []).length); }, 0);
         summary.appendChild(document.createTextNode(label + ' '));
         var badge = document.createElement('span');
         badge.className = 'count';
