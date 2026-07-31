@@ -34,6 +34,8 @@ title: "ZFIN zf_info — Full Table of Contents"
         <button type="button" id="toc-expand">Expand all</button>
         <button type="button" id="toc-collapse">Collapse all</button>
     </div>
+    <div id="toc-root">Loading&hellip;</div>
+    <div id="toc-controls" style="margin-top: 20px; display: none;">
     <p class="booknav-pref">
         <label>
             <input type="checkbox" id="booknav-toggle">
@@ -48,7 +50,7 @@ title: "ZFIN zf_info — Full Table of Contents"
         </label>
         <span class="booknav-pref-note" id="booknav-fulltoc-pref-note"></span>
     </p>
-    <div id="toc-root">Loading&hellip;</div>
+    </div>
 </div>
 
 <script>
@@ -73,7 +75,7 @@ title: "ZFIN zf_info — Full Table of Contents"
         box.addEventListener('change', function () {
             try {
                 if (box.checked) localStorage.setItem(key, 'on');
-                else localStorage.removeItem(key);
+                else localStorage.setItem(key, 'off');
             } catch (e) {}
             paint();
         });
@@ -148,6 +150,8 @@ title: "ZFIN zf_info — Full Table of Contents"
 
     function setAll(open) {
         [].forEach.call(root.querySelectorAll('details'), function (d) { d.open = open; });
+        if (open) {document.getElementById('toc-controls').style.display = 'block';}
+        else {document.getElementById('toc-controls').style.display = 'none';}
     }
     document.getElementById('toc-expand').addEventListener('click', function () { setAll(true); });
     document.getElementById('toc-collapse').addEventListener('click', function () { setAll(false); });

@@ -23,7 +23,7 @@
     if (path.indexOf('/zf_info/') !== 0) return;      // not a zf_info page
     if (path.indexOf('/zf_info/toc/') === 0) return;  // the TOC/index pages themselves
     // Off by default; opt in via the toggle on /zf_info/toc/fulltoc.html.
-    try { if (localStorage.getItem('zfin-booknav') !== 'on') return; } catch (e) { return; }
+    try { if (localStorage.getItem('zfin-booknav') === 'off') return; } catch (e) { return; }
     // Second opt-in: also link back to the master full TOC.
     var showFullToc = false;
     try { showFullToc = localStorage.getItem('zfin-booknav-fulltoc') === 'on'; } catch (e) {}
